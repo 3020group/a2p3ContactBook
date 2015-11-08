@@ -21,13 +21,20 @@ namespace assignmetnt3q3
             this.masterForm = masterForm;
         }
 
+        public newContact()
+        {
+            InitializeComponent();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void createButton_Click(object sender, EventArgs e)
+        protected virtual void createButton_Click(object sender, EventArgs e)
         {
+            
+
             XmlDocument doc = new XmlDocument();
             XmlNode elem;
             String path = @"./a2entries.xml";
@@ -66,6 +73,11 @@ namespace assignmetnt3q3
             doc.Save(path);
             masterForm.populateList();
             Close();
+        }
+
+        private void newContact_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
