@@ -140,17 +140,14 @@
             "2",
             "3",
             "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
+            "Masters",
+            "Ph.D"});
             this.yearCombo.Location = new System.Drawing.Point(233, 148);
             this.yearCombo.Margin = new System.Windows.Forms.Padding(4);
             this.yearCombo.Name = "yearCombo";
             this.yearCombo.Size = new System.Drawing.Size(144, 24);
             this.yearCombo.TabIndex = 10;
+            this.yearCombo.SelectedIndexChanged += new System.EventHandler(this.yearCombo_SelectedIndexChanged);
             // 
             // textBox1
             // 
