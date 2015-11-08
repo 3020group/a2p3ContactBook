@@ -95,9 +95,30 @@ namespace assignmetnt3q3
             newForm.Show();
         }
 
+        // The edit interface
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (listView2.SelectedIndices.Count > 0)
+            {
+                // Edit selected
+               
+                // For every field in the editform, fill it with the corresponding listview field
+                for (int i = listView2.Items.Count - 1; i >= 0; i--)
+                {
+                    if(listView2.Items[i].Selected) // This is the selected item
+                    {
+                        EditForm ef = new EditForm(this, listView2.Items[i]);
+                        ef.Show();
+                        //Let's fill the edit box with the selected item's data
+                    }
+                }
+            }
+            else
+            {
+                //Null selection form must be made
+                NullSelectionForm ns = new NullSelectionForm();
+                ns.Show();
+            }
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -184,8 +205,8 @@ namespace assignmetnt3q3
             else
             {
                 //Null selection form must be made
-                //NullSelectionForm ns = new NullSelectionForm();
-                //ns.Show();
+                NullSelectionForm ns = new NullSelectionForm();
+                ns.Show();
             }
         }
     }
