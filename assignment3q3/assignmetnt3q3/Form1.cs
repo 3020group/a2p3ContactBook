@@ -70,17 +70,17 @@ namespace assignmetnt3q3
 
         private void deleteTool_Click(object sender, EventArgs e)
         {
-
+            button3_Click(sender, e);
         }
 
         private void editTool_Click(object sender, EventArgs e)
         {
-
+            button2_Click(sender, e);
         }
 
         private void aboutTool_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This tool was written by Taylor Cox and Malcolm Mergulhao for COMP 3020 Assignment 2");
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
